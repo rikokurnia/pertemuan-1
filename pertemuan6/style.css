@@ -1,0 +1,93 @@
+/* Palet Warna: F2EFE7 (Bg), 9ACBD0 (Accent), 48A6A7 (Primary) */
+:root {
+    --bg-color: #F2EFE7;
+    --primary-color: #48A6A7;
+    --accent-color: #9ACBD0;
+    --text-dark: #333333;
+    --text-muted: #666666;
+    --card-bg: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    padding: 40px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+/* Error Message Styling */
+.error-message {
+    display: none; /* Disembunyikan secara default */
+    background-color: #ffe6e6;
+    color: #cc0000;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border: 1px solid #cc0000;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* CSS Grid untuk Layout Cards */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Desain Card */
+.user-card {
+    background-color: var(--card-bg);
+    border-top: 5px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(154, 203, 208, 0.4); /* Menggunakan warna accent */
+    border-top-color: var(--accent-color);
+}
+
+.user-card h2 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.user-card p {
+    margin-bottom: 8px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.user-card .company {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eeeeee;
+    font-weight: 600;
+    color: var(--text-dark);
+}
